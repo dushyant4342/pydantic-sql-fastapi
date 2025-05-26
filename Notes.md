@@ -1,3 +1,67 @@
+Deploying the api end point on render
+LIVE at https://pydantic-sql-fastapi.onrender.com/docs/
+
+curl -X POST https://pydantic-sql-fastapi.onrender.com/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "What is FastAPI in 10 words?"}'
+
+
+✅ 1. Render (Free & Easy)
+One-click FastAPI deployment
+Built-in support for .env
+Auto builds from GitHub
+🔗 https://render.com
+
+
+Go to Render → https://render.com
+Sign up (or log in)
+Click "New Web Service"
+Choose "Deploy from GitHub"
+Select your repo: pydantic-sql-fastapi
+
+
+Fill in Deployment Details
+Name: pydantic-sql-fastapi
+Environment: Python 3
+
+Build Command:
+pip install -r requirements.txt
+Start Command:
+uvicorn main:app --host=0.0.0.0 --port=10000
+
+Add Environment Variables
+GEMINI_API_KEY=your_google_gemini_api_key
+
+https://pydantic-sql-fastapi.onrender.com
+Use:
+/ask for questions
+/history for logs
+/docs to explore via FastAPI UI
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+✅ 2. AWS EC2 (Manual & Flexible)
+Pros: Full control, run anything
+Steps:
+Launch a small EC2 instance (Ubuntu)
+
+SSH into it
+Install Python, pip, Git, and Uvicorn
+
+Clone your repo & set .env
+
+Run:
+uvicorn main:app --host=0.0.0.0 --port=80
+
+
+✅ 3. AWS Lambda + API Gateway (Serverless)
+Pros: Pay-per-request, no server to manage
+Cons: Setup is complex for FastAPI, cold starts
+Use AWS Lambda + API Gateway + Mangum to wrap FastAPI
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
 
 🧠 "Ask Gemini2" – LLM Q&A API
 
