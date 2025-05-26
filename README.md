@@ -1,8 +1,7 @@
 # 🚀 pydantic-sql-fastapi
 
-A fast, production-style LLM Q&A API built using **FastAPI**, **Google Gemini**, **Pydantic**, and **SQLite with SQLAlchemy**. It showcases how to structure modern async APIs with validation, logging, and persistent storage.
+A fast, production-style LLM Q&A API built using **FastAPI**, **Google Gemini**, **Pydantic**, and **SQLite with SQLAlchemy**. It showcases how to structure modern async APIs with validation, logging, and persistent storage. SQLAlchemy is an open-source Python library that provides an SQL toolkit (called "SQLAlchemy Core") and an Object Relational Mapper (ORM) for database interactions.
 
-SQLAlchemy is an open-source Python library that provides an SQL toolkit (called "SQLAlchemy Core") and an Object Relational Mapper (ORM) for database interactions.
 ---
 
 ## 🔧 Tech Stack
