@@ -71,24 +71,24 @@ async def ask_question(req: QuestionRequest, db: Session = Depends(get_db)):
 
 #Try it on UI at http://localhost:8000/docs
 
-GitHub Link of the repo 🔗 https://github.com/dushyant4342/pydantic-sql-fastapi
+# GitHub Link of the repo 🔗 https://github.com/dushyant4342/pydantic-sql-fastapi
 
-To try the project:
-Clone the repo
-Add a .env file with your Gemini API key (free from Google AI Studio)
-Run the app: uvicorn main:app --reload
+# To try the project:
+# Clone the repo
+# Add a .env file with your Gemini API key (free from Google AI Studio)
+# Run the app: uvicorn main:app --reload
 
-Access the API via FastAPI UI: http://localhost:8000/docs
+# Access the API via FastAPI UI: http://localhost:8000/docs
 
-Or use it directly from the terminal:
+# Or use it directly from the terminal:
 
-Ask a question:
-curl -X POST http://localhost:8000/ask \
--H "Content-Type: application/json" \
--d '{"question": "What is Asynchronous programming?"}'
+# Ask a question:
+# curl -X POST http://localhost:8000/ask \
+# -H "Content-Type: application/json" \
+# -d '{"question": "What is Asynchronous programming?"}'
 
-Get recent Q&A history:
-curl -X GET "http://localhost:8000/history?limit=3"
+# Get recent Q&A history:
+# curl -X GET "http://localhost:8000/history?limit=3"
 
 
 
