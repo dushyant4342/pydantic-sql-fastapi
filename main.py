@@ -91,4 +91,8 @@ async def ask_question(req: QuestionRequest, db: Session = Depends(get_db)):
 # curl -X GET "http://localhost:8000/history?limit=3"
 
 
+# curl -X POST https://pydantic-sql-fastapi.onrender.com/ask \
+#   -H "Content-Type: application/json" \
+#   -d '{"question": "What is FastAPI in 10 words?"}'
 
+# curl -X GET https://pydantic-sql-fastapi.onrender.com/history?limit=3

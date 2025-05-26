@@ -45,13 +45,22 @@ Steps:
 Launch a small EC2 instance (Ubuntu)
 
 SSH into it
-Install Python, pip, Git, and Uvicorn
+Install Python, pip, Git and Uvicorn
 
 Clone your repo & set .env
 
 Run:
 uvicorn main:app --host=0.0.0.0 --port=80
 
+
+http://<EC2-public-IP>:<port>
+
+Ex:EC2 public IP = 13.201.55.123
+uvicorn main:app --host=0.0.0.0 --port=80
+Then your API will be live at: http://13.201.55.123:80
+Add a rule: Custom TCP | Port 80 | 0.0.0.0/0
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 ✅ 3. AWS Lambda + API Gateway (Serverless)
 Pros: Pay-per-request, no server to manage
