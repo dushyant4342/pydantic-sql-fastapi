@@ -1,0 +1,36 @@
+
+
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is CNN in Deep Learning. Explain with examples in 100 words?"}'
+
+
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is Pydantic, explain within 50 words?"}'
+
+
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is Logging in Python, explain within 50 words?"}'
+
+
+
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is 𝗙𝗮𝘀𝘁𝗔𝗣𝗜, explain in short?"}'
+
+
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is 𝗔𝘀𝘆𝗻𝗰 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴, explain in 50 words?"}'
+
+
+curl -X GET http://localhost:8000/history
+
+curl -X GET "http://localhost:8000/history?limit=1"
+
+curl -X GET "http://localhost:8000/history?q=async"
+
+curl -X GET "http://localhost:8000/history?q=async&limit=3"
+

@@ -6,7 +6,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 #GEMINI_URL = f"https://generative-language.googleapis.com/v1beta/models/gemini-pro:generateContent?key={GEMINI_API_KEY}"
 #GEMINI_URL = f"https://generative-language.googleapis.com/v1/models/gemini-pro:generateContent?key={GEMINI_API_KEY}"
-
+print("🔑 Gemini API Key:", GEMINI_API_KEY)
 
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 async def ask_gemini(prompt: str) -> str:
@@ -30,4 +30,4 @@ async def ask_gemini(prompt: str) -> str:
         return f"❌ Gemini API error: {str(e)}"
 
 
-print("🔑 Gemini API Key:", GEMINI_API_KEY)
+

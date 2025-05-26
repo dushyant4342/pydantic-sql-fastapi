@@ -15,6 +15,7 @@ conn.close()
 # or run in the terminal 
 # sqlite3 gemini-2-flash.db
 # SELECT * FROM qa_history order by timestamp desc LIMIT 2;
+# .exit , .tables , .schema , .help
 
 #or add app endpoint /history with custom reponses like
 # @app.get("/history", response_model=List[QAHistoricItem])

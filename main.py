@@ -12,8 +12,6 @@ from fastapi.responses import JSONResponse
 from schema import QAHistoricItem
 from fastapi import Query
 
-
-
 load_dotenv()
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
@@ -64,6 +62,33 @@ async def ask_question(req: QuestionRequest, db: Session = Depends(get_db)):
 #python -c "import os; from dotenv import load_dotenv; load_dotenv(); print(os.getenv('GEMINI_API_KEY'))"
 #uvicorn main:app --reload                                                                               
 
+
 #  curl -X POST http://localhost:8000/ask \
 #   -H "Content-Type: application/json" \
 #  -d '{"question": "What is a Machine?"}'
+
+# OR
+
+#Try it on UI at http://localhost:8000/docs
+
+GitHub Link of the repo 🔗 https://github.com/dushyant4342/pydantic-sql-fastapi
+
+To try the project:
+Clone the repo
+Add a .env file with your Gemini API key (free from Google AI Studio)
+Run the app: uvicorn main:app --reload
+
+Access the API via FastAPI UI: http://localhost:8000/docs
+
+Or use it directly from the terminal:
+
+Ask a question:
+curl -X POST http://localhost:8000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "What is Asynchronous programming?"}'
+
+Get recent Q&A history:
+curl -X GET "http://localhost:8000/history?limit=3"
+
+
+
